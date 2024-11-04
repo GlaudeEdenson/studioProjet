@@ -28,7 +28,7 @@ body {
     position: absolute;
     width: 100%;
     margin: auto;
-    top: 30%;
+    top: 20%;
 }
 
 .hero-content h1 {
@@ -38,7 +38,13 @@ body {
     text-align: center;
 }
 
-.hero-button {
+#gradientcolor-text {
+    background: linear-gradient(0deg, #dd6e00 0%, #ffff53 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-button, .actionSellBtn {
     padding: 1rem 2rem 1rem 2rem;
     display: block;
     margin: auto;
@@ -51,9 +57,10 @@ body {
     background: linear-gradient(0deg, #4b2500 0%, #707000 100%);
     cursor: pointer;
     transition: 0.5s ease;
+    margin-top: 2rem;
 }
 
-.hero-button:hover {
+.hero-button:hover, .actionSellBtn:hover{
     -webkit-box-shadow: 0 3px 32px -10px #707000;
     -moz-box-shadow: 0 3px 32px -10px #707000;
     box-shadow: 0 3px 32px -10px #707000;
@@ -66,7 +73,9 @@ body {
     gap: 4rem;
     padding: 1.5rem;
 }
+
 .facebook-icon,
+.apple-icon,
 .instagram-icon,
 .youtube-icon,
 .spotify-icon,
@@ -75,23 +84,74 @@ body {
     color: #fff;
     cursor: pointer;
 }
+
 .facebookcontent,
+.Applecontent,
 .instaContent,
 .youtubeContent,
 .spotifyContent,
-.deezerContent{
+.deezerContent {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
+
 .facebookcontent a,
+.Applecontent a,
 .instaContent a,
 .youtubeContent a,
 .spotifyContent a,
-.deezerContent a{
+.deezerContent a {
     text-decoration: none;
     font-size: 16px;
     color: #fff;
     font-weight: bold;
+}
+
+/* Responsive */
+
+@media screen and (max-width:768px) {}
+
+/* InfoSell Section */
+.inforSell {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #232323;
+    -webkit-box-shadow: 0px -44px 50px 50px #232323; 
+    box-shadow: 0px -44px 50px 50px #232323;
+    padding: 2rem;
+}
+.inforSell h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    margin: 2rem;
+    text-transform: capitalize;
+}
+.inforSell p{
+    color: #bfbfbf;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.steps-container{
+    display: flex;
+    gap: 3rem;
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.title-content h3{
+    font-size: 5rem;
+}
+.text-content p{
+    text-align: left;
+}
+.text-content h4{
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 0 1rem 0;
 }

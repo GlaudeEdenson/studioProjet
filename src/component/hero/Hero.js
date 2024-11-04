@@ -2,18 +2,22 @@ import React from "react";
 import "../css/Home.css";
 import heroVideo from "../vidéo/hero.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faSquareInstagram,faYoutube,faSpotify,faDeezer } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faSquareInstagram,faYoutube,faSpotify,faDeezer,faApple } from "@fortawesome/free-brands-svg-icons";
 
 function Hero() {
   return (
     <section className="hero">
       <video src={heroVideo} type="video/mp4" autoPlay muted loop className="video-hero"></video>
       <div className="hero-content">
-        <h1>Bienvenue chez cham-studio</h1>
+        <h1>Bienvenue chez <span id="gradientcolor-text">Cham-Studio</span></h1>
         <div className="icons">
           <div className="facebookcontent">
           <FontAwesomeIcon icon={faFacebook} className="facebook-icon"/> 
           <a href="https://www.facebook.com" target="blank">Facebook</a> 
+          </div> 
+          <div className="Applecontent">
+          <FontAwesomeIcon icon={faApple} className="apple-icon"/>
+          <a href="https://www.apple.com" target="blank">Music</a> 
           </div> 
           <div className="instaContent">
           <FontAwesomeIcon icon={faSquareInstagram} className="instagram-icon" />
@@ -33,7 +37,7 @@ function Hero() {
           </div>
           
         </div>
-        <button className="hero-button">Bienvenu</button>
+        <button className="hero-button">Contactez nous</button>
       </div>
     </section>
   );
