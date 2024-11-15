@@ -9,7 +9,7 @@ function Hero() {
     <section className="hero">
       <video src={heroVideo} type="video/mp4" autoPlay muted loop className="video-hero"></video>
       <div className="hero-content">
-        <h1>Bienvenue chez <span id="gradientcolor-text">Cham-Studio</span></h1>
+        <h1>Bienvenue chez <span id="gradientcolor-text">Eden-Studio</span></h1>
         <div className="icons">
           <div className="facebookcontent">
           <FontAwesomeIcon icon={faFacebook} className="facebook-icon"/> 

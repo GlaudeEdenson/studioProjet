@@ -7,7 +7,6 @@ body {
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
 .hero {
     height: 100vh;
     width: 100%;
@@ -23,12 +22,11 @@ body {
     object-fit: cover;
     z-index: -1;
 }
-
 .hero-content {
     position: absolute;
-    width: 100%;
-    margin: auto;
-    top: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .hero-content h1 {
@@ -37,7 +35,6 @@ body {
     margin: 2rem;
     text-align: center;
 }
-
 #gradientcolor-text {
     background: linear-gradient(0deg, #dd6e00 0%, #ffff53 100%);
     -webkit-background-clip: text;
@@ -59,7 +56,6 @@ body {
     transition: 0.5s ease;
     margin-top: 2rem;
 }
-
 .hero-button:hover, .actionSellBtn:hover{
     -webkit-box-shadow: 0 3px 32px -10px #707000;
     -moz-box-shadow: 0 3px 32px -10px #707000;
@@ -123,7 +119,12 @@ body {
     background-color: #232323;
     -webkit-box-shadow: 0px -44px 50px 50px #232323; 
     box-shadow: 0px -44px 50px 50px #232323;
-    padding: 2rem;
+    padding: 5rem;
+}
+.container-principale{
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
 }
 .inforSell h2{
     text-align: center;

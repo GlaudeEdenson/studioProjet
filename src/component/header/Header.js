@@ -22,7 +22,7 @@ function Header() {
     <nav className="navbar">
       <div className="logo">
         <h1>
-          <Link to="/">Cham-studio</Link>
+          <Link to="/">Eden-studio</Link>
         </h1>
       </div>
       <div className={`bare-denavigation ${open ? "open" : ""}`}>
