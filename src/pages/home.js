@@ -9,6 +9,7 @@ function home() {
       {/* Hero */}
       <Hero />
       <section className="inforSell">
+        <div className="container-principale">
         <div className="container-info">
         <h2>Comment nous vendons <span id="gradientcolor-text">nos instrus ?</span></h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum omnis optio fugit quisquam reiciendis ab eius! Explicabo a error magni quos architecto possimus, laudantium facilis doloremque ad blanditiis nemo! Pariatur suscipit voluptate expedita sapiente dolorum veniam aliquid eveniet impedit eum ducimus ratione exercitationem quis soluta, sed sint beatae id.</p>
@@ -43,6 +44,7 @@ function home() {
               </div>
             </div>
             <button type="button" className="actionSellBtn">Commencer maintenant</button>
+        </div>
         </div>
       </section>
     </>

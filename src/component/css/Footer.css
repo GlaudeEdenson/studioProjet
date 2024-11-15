@@ -1,0 +1,26 @@
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2.5rem;
+    background-image: url(../images//footer_image.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(10px);
+    bottom: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.container h3{
+    color: #fff;
+}
+.container ul {
+    list-style: none;
+    margin: 1rem;
+}
+.container ul li{
+    color: #fff;
+}
