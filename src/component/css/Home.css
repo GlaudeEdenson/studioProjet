@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Roboto sans-serif;
 }
 .hero {
     height: 100vh;
@@ -41,7 +41,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.hero-button, .actionSellBtn {
+.hero-button, .actionSellBtn, .seeMore, .btn-boutique {
     padding: 1rem 2rem 1rem 2rem;
     display: block;
     margin: auto;
@@ -56,7 +56,7 @@ body {
     transition: 0.5s ease;
     margin-top: 2rem;
 }
-.hero-button:hover, .actionSellBtn:hover{
+.hero-button:hover, .actionSellBtn:hover, .seeMore:hover, .btn-boutique:hover{
     -webkit-box-shadow: 0 3px 32px -10px #707000;
     -moz-box-shadow: 0 3px 32px -10px #707000;
     box-shadow: 0 3px 32px -10px #707000;
@@ -105,6 +105,17 @@ body {
     font-weight: bold;
 }
 
+/* Animation */
+.icons div {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .icons div.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 /* Responsive */
 
 @media screen and (max-width:768px) {}
@@ -121,7 +132,7 @@ body {
     box-shadow: 0px -44px 50px 50px #232323;
     padding: 5rem;
 }
-.container-principale{
+.container-principale,.container-store{
     max-width: 1300px;
     width: 100%;
     margin: auto;
@@ -140,8 +151,8 @@ body {
 }
 .steps-container{
     display: flex;
-    gap: 3rem;
-    width: 50%;
+    gap: 2rem;
+    width: 60%;
     margin: auto;
     margin-top: 2rem;
 }
@@ -155,4 +166,82 @@ body {
     font-size: 1.5rem;
     color: #fff;
     margin: 0 0 1rem 0;
+}
+/* Responsive */
+
+@media screen and (max-width:768px) {}
+
+.info{
+    background-color: #303030;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-infoStudio{
+    max-width: 1300px;
+    width: 100%;
+}
+.container-infoStudio h2, #paragraph{
+    text-align: center;
+    margin: 1.5rem;
+}
+.container-infoStudio h2{
+    font-size: 3rem;
+    color: #fff;
+}
+.container-infoStudio p{
+    font-size: 1.2rem;
+    color: #bfbfbf;
+}
+/* Responsive */
+@media screen and (max-width:768px){
+    /* To add */
+}
+/* Store section */
+.boutique{
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #232323;
+}
+.boutique .container-store h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: #fff;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 1rem;
+}
+.product-card{
+    text-align: center;
+    background-color: #303030;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    -webkit-box-shadow: 5px 10px 20px -5px #00000033; 
+    box-shadow: 5px 10px 20px -5px #00000033;
+}
+.product-card h3{
+    font-size: 2rem;
+    color: #a7a7a7;
+}
+.product-card p{
+    text-align: center;
+    margin: 1.5rem;
+    color: #bfbfbf;
+}
+.image_card{
+    max-width: 100%;
+    transform: scale(1);
+    transition: 0.5s ease;
+}
+.image_card:hover{
+    transform: scale(1.03);
 }

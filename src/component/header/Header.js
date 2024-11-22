@@ -10,7 +10,7 @@ function Header() {
 
   useEffect(() => {
     navItemsRef.current.forEach((item) => {
-      if (item.textContent.trim().toLowerCase() === "produits") {
+      if (item.textContent.trim().toLowerCase() === "boutique") {
         item.style.background =
           "linear-gradient(0deg, #4b2500 0%, #707000 100%)";
         item.style.borderRadius = "8px";
@@ -22,7 +22,7 @@ function Header() {
     <nav className="navbar">
       <div className="logo">
         <h1>
-          <Link to="/">Eden-studio</Link>
+          <Link to="/">E-Studio</Link>
         </h1>
       </div>
       <div className={`bare-denavigation ${open ? "open" : ""}`}>
@@ -40,7 +40,7 @@ function Header() {
             <Link to="/panier">panier</Link>
           </li>
           <li ref={(el) => (navItemsRef.current[4] = el)}>
-            <Link to="/product">produits</Link>
+            <Link to="/boutique">boutique</Link>
           </li>
         </ul>
       </div>

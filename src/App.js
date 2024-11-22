@@ -1,13 +1,11 @@
-// App.js
 import React from "react";
 import Layout from "./component/Layout";
 import Service from "./pages/services";
 import About from "./pages/about";
 import Panier from "./pages/panier";
-import Product from "./pages/product";
-import Home from "./pages/home"
+import Home from "./pages/home";
+import Store from "./pages/store";
 import { Route, Routes } from "react-router-dom";
-import "./component/css/Home.css";
 
 function App() {
   return (
@@ -17,8 +15,8 @@ function App() {
       <Route path="/" element={<Home />} />
         <Route path="/services" element={<Service />} />
         <Route path="/about" element={<About />} />
+        <Route path="/store" element={<Store />} />
         <Route path="/panier" element={<Panier />} />
-        <Route path="/product" element={<Product />} />
       </Routes>
     </Layout>
   );

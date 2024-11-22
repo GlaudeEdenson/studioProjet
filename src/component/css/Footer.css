@@ -3,10 +3,7 @@ footer{
     width: 100%;
     height: auto;
     padding: 2.5rem;
-    background-image: url(../images//footer_image.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    backdrop-filter: blur(10px);
+    background-color: #232323;
     bottom: 0;
 }
 .container{
