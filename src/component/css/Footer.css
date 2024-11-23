@@ -1,23 +1,89 @@
-footer{
+footer {
     position: relative;
     width: 100%;
+    bottom: 0;
     height: auto;
     padding: 2.5rem;
     background-color: #232323;
-    bottom: 0;
-}
-.container{
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: center;
+    flex-direction: column;
 }
-.container h3{
+.logo-footer {
+    width: 70%;
+}
+.vertical-separation {
+    width: 100%;
+}
+.info-footer {
+    max-width: 1300px;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    gap: 3rem;
+    align-items: normal;
+    justify-content: center;
+}
+.navigation-footer h4,
+.service-footer h4,
+.horaire-footer h4,
+.reseau-footer h4 {
+    font-size: 1.3em;
     color: #fff;
+    font-weight: bolder;
 }
-.container ul {
+.navigation-footer ul,
+.service-footer ul,
+.horaire-footer ul {
     list-style: none;
-    margin: 1rem;
+    margin: 1rem 0;
 }
-.container ul li{
+.navigation-footer ul li,
+.service-footer ul li,
+.horaire-footer ul li {
+    padding: 0.3rem;
+}
+.navigation-footer ul li a,
+.service-footer ul li,
+.horaire-footer ul li {
+    text-decoration: none;
+    color: #bfbfbf;
+    font-size: 1rem;
+    transition: 0.5s ease;
+}
+.navigation-footer ul li a:hover {
     color: #fff;
+}
+.reseau-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.reseau-footer .icon-to-top{
+    text-align: center;
+    color: #bfbfbf;
+    font-size: 4rem;
+    margin: 2rem 0;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.reseau-footer .icon-to-top:hover{
+    color: #707000;
+    animation: shake 5s infinite alternate;
+}
+.copyRight{
+    width: 100%;
+    align-content: center;
+    padding: 1rem;
+    background-color: #303030;
+}
+.copyRight p{
+    text-align: center;
+    color: #bfbfbf;
+}
+.copyRight p a{
+    text-decoration: none;
+    color: #bfbfbf;
 }

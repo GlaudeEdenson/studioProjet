@@ -11,11 +11,26 @@ import {
   faApple,
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 
 function Hero() {
   const text = "E-Studio";
   const letters = text.split("");
+  const scrollBottom = () =>{
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+  };
+  const scrollTocontact = (id) =>{
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: "smooth"
+      })
+    }
+  }
 
   return (
     <section className="hero">
@@ -142,7 +157,8 @@ function Hero() {
             </a>
           </motion.div>
         </div>
-        <button className="hero-button">Contactez nous</button>
+        <button className="hero-button" onClick={scrollTocontact}>Contactez nous</button>
+        <FontAwesomeIcon icon={faArrowDown} className="scrollBottom" onClick={scrollBottom}/>
       </div>
     </section>
   );
