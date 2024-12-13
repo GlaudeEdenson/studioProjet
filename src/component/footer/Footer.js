@@ -38,7 +38,7 @@ function Footer() {
                   <Link to="/panier">panier</Link>
                 </li>
                 <li ref={(el) => (navItemsRef.current[4] = el)}>
-                  <Link to="/boutique">boutique</Link>
+                  <Link to="/store">boutique</Link>
                 </li>
               </ul>
             </div>

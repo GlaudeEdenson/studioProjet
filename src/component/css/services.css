@@ -1,0 +1,40 @@
+.section-service{
+    width: 100%;
+    height: 80vh;
+    align-content: center;
+    flex-direction: column;
+    background-color: #232323;
+    padding: 5rem;
+}
+.container{
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+}
+.container h1, p{
+    text-align: center;
+}
+.container h1{
+    font-size: 4rem;
+    color: #fff;
+    margin: 2rem;
+}
+.container p{
+    color: #bfbfbf;
+    font-size: 1.2rem;
+}
+.dynamicVideo{
+    height: 100vh;
+    position: relative;
+}
+.video-container-service{
+    max-width: 900px;
+    width: 100%;
+    margin: -5rem auto;
+    filter: brightness(70%);
+}
+.video-service{
+    width: 100%;
+    align-content: center;
+    margin: auto;
+}

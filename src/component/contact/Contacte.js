@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import "../css/contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,32 +11,40 @@ import logo from "../images/logo.png";
 import { motion } from "framer-motion";
 
 function Contact() {
-  const [formData, setFormData] = useState({name: "", email: "", message: ""});
+  const toBoutique = () => {
+    window.location.href = "./boutique";
+  };
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  console.log(formData);
 
-  const handleChange = (e)  =>{
-    const {name, value} = e.target;
-    setFormData({...formData, [name]: value});
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try{
-      const reponse = await fetch("http:://localhost/ProjetChamy/studio-website/backend/server.php", {
-        method:"POST",
-        headers:{
-         "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      if (reponse.ok) {
-        alert("E-mail envoyé avec succès");
-      }else{
-        alert("Erreur de lors de l'envois de l'email")
-      }
-    }
-    catch (error){
+    try {
+      const response = await fetch(
+        "http://localhost/ProjetChamy/studio-website/backend/email.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      const result = await response.json();
+      alert(result.message);
+    } catch (error) {
       console.error("Erreur lors de la requête :", error);
-    } 
-  }
+      alert("Erreur lors de la requête !", error);
+    }
+  };
   return (
     <>
       <section className="contact-section" id="contact">
@@ -113,7 +121,9 @@ function Contact() {
               viewport={{ once: true }}
             >
               <img src={logo} alt="logo" id="logo" />
-              <button id="call-to-action">Voir nos produits</button>
+              <button id="call-to-action" onClick={toBoutique}>
+                Voir nos produits
+              </button>
             </motion.div>
           </div>
         </div>

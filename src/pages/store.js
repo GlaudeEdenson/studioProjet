@@ -1,10 +1,9 @@
 import React from "react";
 
-
 function store() {
   return (
     <>
-        <h1>Store</h1>
+      <h1>Store</h1>
     </>
   );
 }
