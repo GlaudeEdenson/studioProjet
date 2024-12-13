@@ -96,6 +96,7 @@ label {
 
 input,
 textarea {
+    font-family: sans-serif;
     border: none;
     width: 100%;
     background: none;

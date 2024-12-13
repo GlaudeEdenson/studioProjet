@@ -1,6 +1,7 @@
-import React from "react"; 
+import React from "react";
 import Hero from "../component/hero/Hero";
 import Contact from "../component/contact/Contacte";
+import Demo from "../component/demo/Demo_instru";
 import "../component/css/Home.css";
 import player from "../component/images/player_guitare.jpg";
 import enceinte from "../component/images/enceinte.jpg";
@@ -8,6 +9,15 @@ import saxophone from "../component/images/saxophone.jpg";
 import { motion } from "framer-motion";
 
 function home() {
+  const Toservice = () => {
+    window.location.href = "./services";
+  };
+  const toAbout = () => {
+    window.location.href = "./about";
+  };
+  const toBoutique = () => {
+    window.location.href = "./boutique";
+  };
   return (
     <>
       {/* Hero */}
@@ -72,12 +82,13 @@ function home() {
                 </p>
               </div>
             </div>
-            <button type="button" className="actionSellBtn">
+            <button type="button" className="actionSellBtn" onClick={Toservice}>
               Commencer maintenant
             </button>
           </div>
         </div>
       </section>
+      <Demo />
       <section className="info">
         <div className="container-infoStudio">
           <h2>
@@ -92,7 +103,7 @@ function home() {
             Culpa tenetur nihil magni maxime ipsum numquam illo aspernatur minus
             porro. Id impedit ipsa consequuntur.
           </p>
-          <button type="button" className="seeMore">
+          <button type="button" className="seeMore" onClick={toAbout}>
             Voir plus
           </button>
         </div>
@@ -159,12 +170,12 @@ function home() {
               </p>
             </motion.div>
           </div>
-          <button type="button" className="btn-boutique">
+          <button type="button" className="btn-boutique" onClick={toBoutique}>
             Aller à la boutique
           </button>
         </div>
       </section>
-      <Contact/>
+      <Contact />
     </>
   );
 }
