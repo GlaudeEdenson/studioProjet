@@ -9,6 +9,30 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/logo.png";
 import { motion } from "framer-motion";
+import { title } from "framer-motion/client";
+
+const cardsContact = [
+  {
+    icon: <FontAwesomeIcon icon={faLocationDot} className="icon gps" />,
+    title: "Adresse postale :",
+    valueText: "Route de Montabo 10 rue stanislas lemki",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faPhone} className="icon gps" />,
+    title: "Tel portable :",
+    valueText: "+594694133970",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faFax} className="icon gps" />,
+    title: "Tel fixe :",
+    valueText: "+594694133970",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faEnvelope} className="icon gps" />,
+    title: "Envoyez un mail :",
+    valueText: "glaudeedenson@gmail.com",
+  },
+];
 
 function Contact() {
   const toBoutique = () => {
@@ -49,28 +73,23 @@ function Contact() {
     <>
       <section className="contact-section" id="contact">
         <div className="container-contact">
-          <div className="cords-contact">
-            <div className="gps-card">
-              <FontAwesomeIcon icon={faLocationDot} className="icon gps" />
-              <h3>Adresse postale</h3>
-              <p>Route de Montabo 10 rue stanislas lemki</p>
-            </div>
-            <div className="gps-card">
-              <FontAwesomeIcon icon={faPhone} className="icon gps" />
-              <h3>Tel portable :</h3>
-              <p>694133970</p>
-            </div>
-            <div className="gps-card">
-              <FontAwesomeIcon icon={faFax} className="icon gps" />
-              <h3>Tel fixe : </h3>
-              <p>694133970</p>
-            </div>
-            <div className="gps-card">
-              <FontAwesomeIcon icon={faEnvelope} className="icon gps" />
-              <h3>Envoyez un mail :</h3>
-              <p>glaudeedenson@gmail.com</p>
-            </div>
+          <div className="cards-contact">
+            {cardsContact.map((element, index) => (
+              <div className="cards-content" key={index}>
+                {element.icon}
+                <h3>{element.title}</h3>
+                {/* Condition */}
+                {element.title === "Tel portable :" ||
+                element.title === "Tel fixe :" ? (
+                  <a href={`tel:${element.valueText}`}>{element.valueText}</a>
+                ) : (
+                  <p>{element.valueText}</p>
+                )}
+              </div>
+            ))}
+            ;
           </div>
+
           <div className="contact-form">
             <div className="container-form">
               <form onSubmit={handleSubmit}>

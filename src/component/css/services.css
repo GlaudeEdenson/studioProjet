@@ -1,40 +1,120 @@
-.section-service{
+.sectionONe-service {
+    position: relative;
     width: 100%;
-    height: 80vh;
     align-content: center;
     flex-direction: column;
-    background-color: #232323;
+    background-image: url(../images//enceinte.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     padding: 5rem;
 }
-.container{
+
+.sectionONe-service::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000050;
+    z-index: 1;
+}
+
+.sectionONe-service>* {
+    position: relative;
+    z-index: 2;
+}
+
+.container,
+.container-two-service {
     max-width: 1300px;
     width: 100%;
     margin: auto;
 }
-.container h1, p{
+
+.container h1,
+.paragraphOne {
     text-align: center;
 }
-.container h1{
+
+.container h1 {
     font-size: 4rem;
     color: #fff;
     margin: 2rem;
 }
-.container p{
+
+.container p {
     color: #bfbfbf;
     font-size: 1.2rem;
 }
-.dynamicVideo{
-    height: 100vh;
+
+/* Deuxième section */
+.list-service-card {
+    background-color: #303030;
     position: relative;
-}
-.video-container-service{
-    max-width: 900px;
     width: 100%;
-    margin: -5rem auto;
-    filter: brightness(70%);
-}
-.video-service{
-    width: 100%;
+    display: flex;
     align-content: center;
-    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem;
+}
+.container-two-service{
+    display: flex;
+    gap: 2rem;
+}
+.card{
+    background-color: #bfbfbf;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 100%;
+    -webkit-box-shadow: 0 3px 32px -10px #707000;
+    -moz-box-shadow: 0 3px 32px -10px #707000;
+    box-shadow: 0 3px 32px -10px #707000;
+}
+.card p {
+    width: 100%;
+}
+.card h3{
+    position: relative;
+    top: -3.5rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 60%;
+    padding: 15px;
+    background: linear-gradient(0deg, #dd6e00 0%, #ffff53 100%);
+    border-radius: 8px;
+}
+.tarif{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    margin: 1.5rem 0;
+    border-top:  solid 1px #442200;
+}
+.tarif ul{
+    list-style: none;
+}
+.tarif ul li{
+    font-size: 1rem;
+    padding: 8px 0;
+}
+.service-btn{
+    padding: 1rem 2rem 1rem 2rem;
+    width: 100%;
+    position: relative;
+    bottom: -3.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    background: #442200;
+    background: linear-gradient(0deg, #4b2500 0%, #707000 100%);
+    cursor: pointer;
+    transition: 0.5s ease;
 }

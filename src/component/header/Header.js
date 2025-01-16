@@ -36,11 +36,11 @@ function Header() {
           <li ref={(el) => (navItemsRef.current[2] = el)}>
             <Link to="/about">a propos</Link>
           </li>
-          <li ref={(el) => (navItemsRef.current[3] = el)}>
-            <Link to="/panier">panier</Link>
-          </li>
           <li ref={(el) => (navItemsRef.current[4] = el)}>
             <Link to="/store">boutique</Link>
+          </li>
+          <li ref={(el) => (navItemsRef.current[3] = el)}>
+            <Link to="/panier">panier</Link>
           </li>
         </ul>
       </div>

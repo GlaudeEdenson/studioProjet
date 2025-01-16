@@ -11,7 +11,8 @@ function Contact() {
   } 
   return (
     <section className="demo-section">
-      <h2>Démonstration de nos instru</h2>
+      <h2>Démonstration de nos instrus</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis culpa, sint reiciendis aliquam officiis iste. Veniam ab ipsa nisi voluptatum perspiciatis possimus, officiis quisquam labore beatae incidunt officia laborum eligendi, sint, fugit debitis. Non quis aspernatur, molestiae nobis mollitia quia provident quos culpa maiores perspiciatis fugit quaerat corporis officiis eaque!</p>
       <div className="container-demo">
         <div className="Video-demo-container">
           {/* <img src={imageDemo} alt="imageDemo" className="imageDemo"/> */}
